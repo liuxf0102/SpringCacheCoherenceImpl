@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coherence xmlns="http://xmlns.oracle.com/coherence/coherence-operational-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-operational-config http://xmlns.oracle.com/coherence/coherence-operational-config/1.1/coherence-operational-config.xsd">
+<coherence
+	xmlns="http://xmlns.oracle.com/coherence/coherence-operational-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-operational-config http://xmlns.oracle.com/coherence/coherence-operational-config/1.1/coherence-operational-config.xsd">
 	<cluster-config>
 		<member-identity>
 			<cluster-name>SpringCoherenceCache</cluster-name>
@@ -9,12 +12,32 @@
 			<port>1221</port>
 			<time-to-live>0</time-to-live>
 		</multicast-listener>
+		<services>
+
+			<service id="3">
+
+				<init-params>
+
+					<init-param id="4">
+
+						<param-name>local-storage</param-name>
+
+						<param-value system-property="tangosol.coherence.distributed.localstorage">false</param-value>
+
+					</init-param>
+
+				</init-params>
+
+			</service>
+
+		</services>
 	</cluster-config>
 	<configurable-cache-factory-config>
 		<init-params>
 			<init-param>
 				<param-type>java.lang.String</param-type>
-				<param-value system-property="tangosol.coherence.cacheconfig">coherence-cache-config.xml</param-value>
+				<param-value system-property="tangosol.coherence.cacheconfig">coherence-cache-config.xml
+				</param-value>
 			</init-param>
 		</init-params>
 	</configurable-cache-factory-config>
