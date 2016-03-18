@@ -1,0 +1,4 @@
+10:37:57 DEBUG org.spring.cache.impl.CoherenceCacheFactoryBean  98 getObject - impl
+10:37:57 DEBUG org.spring.cache.impl.CoherenceCacheManager  162 loadCaches - Here
+10:37:58 DEBUG org.spring.cache.impl.CoherenceCacheFactoryBean  98 getObject - impl
+10:37:58 DEBUG org.spring.cache.impl.CoherenceCacheManager  162 loadCaches - Here
